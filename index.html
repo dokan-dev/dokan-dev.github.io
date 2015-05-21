@@ -25,19 +25,15 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="http://dokan-dev.github.com">Home</a></li>
-                <li><a href="#about">Download</a></li>
-                <li><a href="#contact">Donate</a></li>
+                <li><a href="https://github.com/dokan-dev/dokany/releases">Download</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Getting Help <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Getting Started</a></li>
-                    <li><a href="#">Wiki</a></li>
-					<li><a href="#">Developer Documentation</a></li>
+                    <li><a href="https://github.com/dokan-dev/dokany/blob/master/dokan/readme.txt">Getting Started</a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header">Discussion</li>
-                    <li><a href="#">Issues</a></li>
-                    <li><a href="#">Forum</a></li>
-					<li><a href="#">IRC</a></li>
+                    <li><a href="https://github.com/dokan-dev/dokany/issues">Issues</a></li>
+                    <li><a href="https://groups.google.com/forum/#!forum/dokan">Forum</a></li>
                   </ul>
                 </li>
               </ul>
@@ -67,7 +63,7 @@
 				Dokan is an user mode file system for Windows.<br />
 				It allows anyone to develop safely and easily a new file system on Windows operating systems.
 			  </p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Getting Started</a></p>
+              <p><a class="btn btn-lg btn-primary" href="https://github.com/dokan-dev/dokany/blob/master/dokan/readme.txt" role="button">Getting Started</a></p>
             </div>
           </div>
         </div>
@@ -81,7 +77,7 @@
 			    You can browse and contribute to the source code, including the kernel driver.<br />
 				You can also use it in open source projects and commercial products.
 			  </p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse the source</a></p>
+              <p><a class="btn btn-lg btn-primary" href="https://github.com/dokan-dev/dokany/" role="button">Browse</a></p>
             </div>
           </div>
         </div>
@@ -91,7 +87,7 @@
             <div class="carousel-caption">
               <h1>Multiple API</h1>
               <p>To simplify user mode development, Dokan was wrapped to several languages including C, .NET, Java ...</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Show API</a></p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Show APIs</a></p>
             </div>
           </div>
         </div>
@@ -117,21 +113,20 @@
       <div class="row">
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Data as file</h2>
+          <p>
+			Easily mount any kind of data as a virtual file and access it transparently from all your Windows applications. It can literally be anything: files from other location, locally or remotely on the cloud ... Creativity will be your limit.
+		  </p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Access Control</h2>
+          <p>Working in user mode has several benefits and access control is one of them. You can have complex and custom access checks with even multiple security layers if you want to.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Be safe</h2>
+          <p><strong>Dokan</strong> take care about the hard stuff and you never have to go deeper into kernel mode. This means you can develop your driver safely without having to fear BSOD at any test. <strong>Dokan</strong> code is available online since 2007 ; people changed and disappeared but the code remains thanks to the open source community.</p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -142,11 +137,12 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Driver. <span class="text-muted">Don't.</span></h2>
+          <p class="lead">When you want to create a new file system on Windows you need to develop a file system driver. Developing a device driver that works in kernel mode on Windows requires highly techical skills.<br />
+		  By using Dokan, you can create your own file systems very easily without writing device driver. Dokan is similar to FUSE (Linux user mode file system) but works on Windows.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <!--<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
         </div>
       </div>
 
@@ -154,23 +150,34 @@
 
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">User-mode API. <span class="text-muted">As you like.</span></h2>
+          <p class="lead">Dokan User-mode API provides functions to mount/unmount your driver and several callbacks to implement on your application to have a fully working user mode file system driver.</p>
+		  <p class="lead">
+			Additionally to the default provided <a href="https://github.com/dokan-dev/dokany/">C</a> library, the API is also available for <a href="https://github.com/dokan-dev/dokan-dotnet">DotNet</a>, <a href="#">Java</a> and <a href="https://github.com/dokan-dev/dokan-ruby">Ruby</a>.
+		  </p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <!--<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
         </div>
       </div>
 
       <hr class="featurette-divider">
-
-      <div class="row featurette">
+	  
+	  <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Projects. <span class="text-muted">See it's working.</span></h2>
+          <p class="lead">
+			Dokan is used in a variety of projects, a short list bellow.
+			<ul>
+			  <li><strong><a href="https://github.com/dokan-dev/dokan-sshfs">Dokan SSHFS</a></strong> SSH File System</li>
+			  <li><strong><a href="https://github.com/dimov-cz/win-sshfs">Win-SSHFS</a></strong> SSH File System</li>
+			  <li><strong><a href="http://members.ferrara.linux.it/freddy77/encfs.html">encfs4win</a></strong> Encryption File System</li>
+			  <li>...</li>
+			</ul>
+		  </p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <!--<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
         </div>
       </div>
 
@@ -182,7 +189,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>A project supported by <a href="http://www.islog.com">ISLOG</a> company.</p>
       </footer>
 
     </div><!-- /.container -->
