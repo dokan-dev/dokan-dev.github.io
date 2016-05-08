@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Dokan</title>
+	<title>Dokan - User mode file system library for windows with FUSE Wrapper</title>
+	<link rel="icon" type="image/png" href="images/walnut.png" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/carousel.css">
+	<link rel="stylesheet" href="css/dokan.css">
 </head>
 <body>
 	
@@ -37,6 +39,7 @@
                     <li><a href="https://groups.google.com/forum/#!forum/dokan">Forum</a></li>
                   </ul>
                 </li>
+				<li><a href="#faq">FAQ</a></li>
                 <li><a href="#supportus">Support Us</a></li>
               </ul>
             </div>
@@ -54,6 +57,7 @@
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
@@ -93,6 +97,16 @@
             </div>
           </div>
         </div>
+		<div class="item">
+          <img class="third-slide" src="images/nut3.jpg" alt="Fourth slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>FUSE Wrapper</h1>
+              <p>Directly run your FUSE (Filesystem in Userspace) implementation on windows without changes.</p>
+              <p><a class="btn btn-lg btn-primary" href="#fuse-api" role="button">FUSE on Windows</a></p>
+            </div>
+          </div>
+        </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -117,7 +131,7 @@
           <img class="img-circle" src="images/walnut.png" alt="">
           <h2>Data as file</h2>
           <p>
-			Easily mount any kind of data as a virtual file and access it transparently from all your Windows applications. It can literally be anything: files from other location, stored locally or remotely in the cloud... Creativity will be your limit.
+			Easily mount any kind of data as a virtual file and access it transparently from all your Windows applications. It can literally be anything: files from other locations, stored locally or remotely in the cloud... Creativity will be your limit.
 		  </p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
@@ -128,7 +142,7 @@
         <div class="col-lg-4">
           <img class="img-circle" src="images/walnut.png" alt="">
           <h2>Be safe</h2>
-          <p><strong>Dokan</strong> takes care about the hard stuff and you never have to go deeper into kernel mode. This means you can develop your driver safely without having to fear BSOD at any test. <strong>Dokan</strong> code is available online since 2007. While people came and left the code remains alive thanks to the open source community.</p>
+          <p><strong>Dokan</strong> takes care of the hard stuff and you never have to go deeper into kernel mode. This means you can develop your driver safely without having to fear BSOD at any test. <strong>Dokan</strong> code is available online since 2007. While people came and left the code remains alive thanks to the open source community.</p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -140,11 +154,11 @@
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Driver. <span class="text-muted">Don't.</span></h2>
-          <p class="lead">When you want to create a new file system on Windows you need to develop a file system driver. Developing a device driver that works in kernel mode on Windows requires highly technical skills.<br />
+          <p class="lead">When you want to create a new file system on Windows you need to develop a file system driver. Developing a device driver that works in the kernel mode on Windows requires highly technical skills.<br />
 		  By using Dokan, you can create your own file systems very easily without writing device drivers. Dokan is similar to FUSE (Linux user mode file system) but works on Windows.</p>
         </div>
         <div class="col-md-5">
-          <!--<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
+          <img class="featurette-image img-responsive center-block" src="images/bsod.png" alt="Blue Screen of Death in Windows 10">
         </div>
       </div>
 
@@ -159,49 +173,155 @@
 		  </p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <!--<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
+			<span class="featurette-image img-responsive center-block glyphicon glyphicon-cog blue" style="font-size:260px;" aria-hidden="true"></span>
+        </div>
+      </div>
+	  
+	  <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div id="fuse-api" class="col-md-7">
+          <h2 class="featurette-heading">FUSE <span class="text-muted">Wrapper.</span></h2>
+		  <p class="lead">
+			<a href="https://github.com/dokan-dev/dokany/wiki/FUSE">Dokan FUSE</a> (Filesystem in Userspace) is a wrapper library that makes Dokan compatible with FUSE API. You simply need to rebuild your FUSE source code without changes with Cygwin/MinGW and link against the library to make it work on Windows. Now available by default in the main source repository and installers.
+		  </p>
+        </div>
+        <div class="col-md-5">
+			<span class="featurette-image img-responsive center-block glyphicon glyphicon-random blue" style="font-size:260px;" aria-hidden="true"></span>
         </div>
       </div>
 
       <hr class="featurette-divider">
 	  
 	  <div class="row featurette">
-        <div class="col-md-7">
+        <div class="col-md-9">
           <h2 class="featurette-heading">Projects. <span class="text-muted">See it working.</span></h2>
           <p class="lead">
-			Dokan is used in a variety of projects, a short list bellow.
-			<ul>
-			  <li><strong><a href="https://github.com/viciousviper/DokanCloudFS">DokanCloudFS</a></strong> Access to different cloud storage services as virtual driver (OneDriver, Google Drive, MEGA, ...). </li>
-			  <li><strong><a href="https://github.com/dokan-dev/dokan-sshfs">Dokan SSHFS</a></strong> SSH File System</li>
-			  <li><strong><a href="https://bitbucket.org/dmilligan/mlvfs">MLVFS</a></strong> Magic Lantern Video File System</li>
-			  <li><strong><a href="https://github.com/dimov-cz/win-sshfs">Win-SSHFS</a></strong> SSH with SSH.NET File System</li>
-			  <li><strong><a href="http://members.ferrara.linux.it/freddy77/encfs.html">encfs4win</a></strong> Encryption File System</li>
-			  <li><strong><a href="http://www.opendedup.org">Opendedup CDFS</a></strong> Deduplication Based File System</li>
-			  <li><strong><a href="https://github.com/islog/dokan-nfc">Dokan NFC</a></strong> RFID / NFC File System</li>
-			  <li><strong><a href="https://code.google.com/p/ninefs/">Ninefs</a></strong> 9p File System</li>
-			  <li><strong><a href="https://code.google.com/p/redfs-windows-filesystem/">RedFS</a></strong> Single File System</li>
-			  <li><strong><a href="https://code.google.com/p/winunionfs/">WinUnionFS</a></strong> UnionFS-like File System</li>
-			  <li><strong><a href="https://code.google.com/p/mssqlfs/">MSSQLFS</a></strong> MS SQL File System</li>
-			  <li><strong><a href="http://peonefs.codeplex.com/">PeoneFS</a></strong> Pseudo Encrypted and Obfuscated File System</li>
-			  <li><strong><a href="http://dokandiscutils.codeplex.com/">DiscUtils</a></strong> Image/Partition mounter using DiscUtils</li>
-			  <li><strong><a href="https://code.google.com/p/zfs-win/">ZFS-Win</a></strong> ZFS File System</li>
-			  <li><strong><a href="http://www.ferrobackup.com/ftpuse/">FtpUse</a></strong> FTP File System</li>
-			  <li><strong><a href="https://code.google.com/p/chunking-filesystem/">ChunkFS</a></strong> Chunked File System</li>
-			  <li><strong><a href="https://cuemounter.codeplex.com/">CueMounter</a></strong> Cue File System</li>
-              		  <li><strong><a href="https://code.google.com/p/srcdemo2/">SrcDemo²</a></strong> Render smoother Source Engine videos, faster</li>
-			  <li>...</li>
-			</ul>
+			Dokan is used in a variety of projects, a short list below.
+			<table class="table table-striped">
+			  <tr><th><strong><a href="https://github.com/viciousviper/DokanCloudFS">DokanCloudFS</a></strong></th><th> Access to different cloud storage services as virtual driver (OneDriver, Google Drive, MEGA, ...). </th></tr>
+			  <tr><th><strong><a href="https://github.com/dokan-dev/dokan-sshfs">Dokan SSHFS</a></strong></th><th> SSH File System</th></tr>
+			  <tr><th><strong><a href="https://bitbucket.org/dmilligan/mlvfs">MLVFS</a></strong></th><th> Magic Lantern Video File System</th></tr>
+			  <tr><th><strong><a href="https://github.com/dimov-cz/win-sshfs">Win-SSHFS</a></strong></th><th> SSH with SSH.NET File System</th></tr>
+			  <tr><th><strong><a href="http://members.ferrara.linux.it/freddy77/encfs.html">encfs4win</a></strong></th><th> Encryption File System</th></tr>
+			  <tr><th><strong><a href="http://www.opendedup.org">Opendedup CDFS</a></strong></th><th> Deduplication Based File System</th></tr>
+			  <tr><th><strong><a href="https://github.com/islog/dokan-nfc">Dokan NFC</a></strong></th><th> RFID / NFC File System</th></tr>
+			  <tr><th><strong><a href="https://code.google.com/p/ninefs/">Ninefs</a></strong></th><th> 9p File System</th></tr>
+			  <tr><th><strong><a href="https://code.google.com/p/redfs-windows-filesystem/">RedFS</a></strong></th><th> Single File System</th></tr>
+			  <tr><th><strong><a href="https://code.google.com/p/winunionfs/">WinUnionFS</a></strong></th><th> UnionFS-like File System</th></tr>
+			  <tr><th><strong><a href="https://code.google.com/p/mssqlfs/">MSSQLFS</a></strong></th><th> MS SQL File System</th></tr>
+			  <tr><th><strong><a href="http://peonefs.codeplex.com/">PeoneFS</a></strong></th><th> Pseudo Encrypted and Obfuscated File System</th></tr>
+			  <tr><th><strong><a href="http://dokandiscutils.codeplex.com/">DiscUtils</a></strong></th><th> Image/Partition mounter using DiscUtils</th></tr>
+			  <tr><th><strong><a href="https://code.google.com/p/zfs-win/">ZFS-Win</a></strong></th><th> ZFS File System</th></tr>
+			  <tr><th><strong><a href="http://www.ferrobackup.com/ftpuse/">FtpUse</a></strong></th><th> FTP File System</th></tr>
+			  <tr><th><strong><a href="https://code.google.com/p/chunking-filesystem/">ChunkFS</a></strong></th><th> Chunked File System</th></tr>
+			  <tr><th><strong><a href="https://cuemounter.codeplex.com/">CueMounter</a></strong></th><th> Cue File System</th></tr>
+              <tr><th><strong><a href="https://code.google.com/p/srcdemo2/">SrcDemo²</a></strong></th><th> Render smoother Source Engine videos, faster</th></tr>
+			  <tr><th>...</th><th>...</th></tr>
+			</table>
 		  </p>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-3">
           <!--<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
+        </div>
+      </div>
+	  
+	  <hr class="featurette-divider">
+      
+      <div class="row featurette">
+        <div id="faq" class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Frequently Asked Questions</h2>
+		<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">What is the story of Dokan?</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                The Dokan Library project was originally created and maintained by Hiroki Asakawa from 2007 to 2011.<br>
+				It has been maintained from 2011 to 2014 by the community with different fork.<br>
+				Since 2014, the project is highly maintained by Adrien J. and Maxime C. with the fork Dokany and gracefully code signed by the company <strong>ISLOG</strong>.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">Will Dokany be frequently maintained?</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Dokany is <strong><a href="https://github.com/dokan-dev/dokany/graphs/contributors">highly maintained</a></strong> since it starts. The community is growing and number of contributors (that we <span class="glyphicon glyphicon-heart blue" aria-hidden="true"></span>) are also growing every day.
+                </div>
+            </div>
+        </div>
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3">Which Operating Systems are supported?</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+				You can find a full list of supported operating system <strong><a href="https://github.com/dokan-dev/dokany#environment">here</a></strong>.
+                </div>
+            </div>
+        </div>
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4">What's new since Dokan first name?</a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">
+				Until version 0.7.4, Dokany focused to improve and fix Dokan 0.6.0 (by Hiroki Asakawa) without breaking compatibility.
+				You can find the full change log <strong><a href="https://github.com/dokan-dev/dokany/releases">here</a></strong>
+				But in simple words: A lots of fixes, more stability and it is much more near of a real file system than ever.
+                </div>
+            </div>
+        </div>
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5">Is Dokany ready for a commercial product?</a>
+                </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+                <div class="panel-body">
+				<strong>It is !</strong> There are still a few things `not available yet` and on the roadmap but these are well documented today on github so if you don't need it, you should be fine.
+				If you do commercial products based on Dokany, please be sure to <strong><a href="https://github.com/dokan-dev/dokany#licensing">respect licenses</a></strong> and `be fair`
+				if it becomes a success, it is always appreciated being <strong><a href="#supportus">supported</a></strong> for an open source projects.
+                </div>
+            </div>
+        </div>
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse6">What is ISLOG’s relationship to Dokany?</a>
+                </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse">
+                <div class="panel-body">
+				The project is supported by <strong>ISLOG</strong> company which provide tools, driver certificate for releases, and other kinds of development materials.
+				The project is used internally by our company so some features and bug fixes was developed at our business time, but the project is a personal initiative and mainly supported at personal time.
+                </div>
+            </div>
+        </div>
+		</div>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+		  <span class="featurette-image img-responsive center-block glyphicon glyphicon-question-sign blue" style="font-size:260px;" aria-hidden="true"></span>
         </div>
       </div>
 
       <hr class="featurette-divider">
       
       <div class="row featurette">
-        <div id="supportus" class="col-md-7 col-md-push-5">
+        <div id="supportus" class="col-md-7">
           <h2 class="featurette-heading">Support Us. <span class="text-muted">Thank you.</span></h2>
           <p class="lead">Maintaining a Windows driver and its associated libraries requires time and specific knowledge (ok, as always). We focus on stability and improvement but any help (code contribution, testing, issues resolving ...) is highly appreciated.</p>
 		  <p class="lead">
@@ -209,8 +329,8 @@
             Alternatively you can also directly use <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dev@islog.com&lc=US&item_name=Dokany&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">Paypal</a>. Be fair.
 		  </p>
         </div>
-        <div class="col-md-5 col-md-pull-7">
-          <!--<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
+        <div class="col-md-5">
+		  <span class="featurette-image img-responsive center-block glyphicon glyphicon-heart-empty blue" style="font-size:260px;" aria-hidden="true"></span>
         </div>
       </div>
       
