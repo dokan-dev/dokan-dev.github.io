@@ -5,3 +5,11 @@
 .blue {
     color: #2067b2;
 }
+
+.sponsor-max-logo {
+    max-width: 200px;
+}
+
+.sponsor {
+    text-align: center;
+}
